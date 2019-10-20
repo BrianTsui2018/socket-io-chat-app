@@ -1,3 +1,9 @@
+/**
+ * Message data indicating who, what, when.
+ * @param {String} username 
+ * @param {String} text 
+ * @return {Object} username, text, createdAt
+ */
 const generateMessage = (username, text) => {
     return {
         username,
@@ -7,6 +13,11 @@ const generateMessage = (username, text) => {
 
 }
 
+/**
+ * Message data indicating who, api query string, when. 
+ * @param {String} username 
+ * @param {String} url - expects a Google Map query string with longitude and latitude 
+ */
 const generateLocationMessage = (username, url) => {
     return {
         username,
@@ -15,6 +26,7 @@ const generateLocationMessage = (username, url) => {
     }
 
 }
+
 module.exports = {
     generateMessage,
     generateLocationMessage
